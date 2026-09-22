@@ -1,0 +1,27 @@
+name: 🌍 新增法域 / 法律
+description: 申请加入新的国家、地区或某部法律
+labels: ["data", "new-jurisdiction"]
+body:
+  - type: input
+    id: jurisdiction
+    attributes: { label: 法域, placeholder: "例：德国 de / 韩国 kr / 美国加州 us-ca" }
+    validations: { required: true }
+  - type: textarea
+    id: laws
+    attributes: { label: 希望优先收录的法律 }
+  - type: input
+    id: source
+    attributes: { label: 官方数据来源 URL }
+    validations: { required: true }
+  - type: input
+    id: license
+    attributes: { label: 来源授权 / 可再利用的法律依据, placeholder: "例：OGL v3.0 / 公有领域 / 官方再利用政策" }
+    validations: { required: true }
+  - type: checkboxes
+    id: api
+    attributes:
+      label: 获取方式
+      options:
+        - label: 有官方 API
+        - label: 有批量下载
+        - label: 仅网页

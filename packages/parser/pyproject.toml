@@ -1,0 +1,11 @@
+[project]
+name = "openlex-parser"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

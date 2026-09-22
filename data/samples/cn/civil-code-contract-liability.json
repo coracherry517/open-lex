@@ -1,0 +1,55 @@
+{
+  "uri": "/cn/law/2020/civil-code",
+  "jurisdiction": "cn",
+  "doc_type": "law",
+  "official_title": "中华人民共和国民法典",
+  "lang": "zh-Hans",
+  "legal_areas": ["civil", "contract"],
+  "version": {
+    "label": "2020",
+    "promulgated_on": "2020-05-28",
+    "effective_from": "2021-01-01",
+    "effective_to": null,
+    "status": "in_force"
+  },
+  "source": {
+    "url": "https://flk.npc.gov.cn",
+    "retrieved_at": "2026-09-22",
+    "license": "CN Copyright Law Art.5 (not subject to copyright)"
+  },
+  "provisions": [
+    {
+      "level": "part",
+      "number_label": "第三编",
+      "number_sort": 3,
+      "heading": "合同",
+      "path": "p3",
+      "children": [
+        {
+          "level": "chapter",
+          "number_label": "第八章",
+          "number_sort": 8,
+          "heading": "违约责任",
+          "path": "p3/c8",
+          "children": [
+            {
+              "level": "article",
+              "number_label": "第五百七十七条",
+              "number_sort": 577,
+              "path": "p3/c8/a577",
+              "text": "当事人一方不履行合同义务或者履行合同义务不符合约定的，应当承担继续履行、采取补救措施或者赔偿损失等违约责任。",
+              "translations": [
+                {
+                  "lang": "en",
+                  "tier": "machine",
+                  "engine": "example-mt",
+                  "text": "Where a party fails to perform its contractual obligations or its performance does not conform to the agreement, it shall bear liability for breach of contract, such as continuing performance, taking remedial measures, or compensating for losses."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

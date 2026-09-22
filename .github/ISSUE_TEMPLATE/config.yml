@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 一般讨论 / 提问
+    url: https://github.com/coracherry517/open-lex/discussions
+    about: 使用问题、想法交流请到 Discussions
+  - name: ⚠️ 需要法律帮助？
+    url: https://github.com/coracherry517/open-lex/blob/main/DISCLAIMER.md
+    about: 本仓库 Issue 不提供个案法律咨询，请使用平台的求助功能或咨询执业律师

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/coracherry517/open-lex/data/schema/statute.schema.json",
+  "title": "OpenLex Statute",
+  "type": "object",
+  "required": ["uri", "jurisdiction", "doc_type", "official_title", "lang", "version", "source", "provisions"],
+  "properties": {
+    "uri": { "type": "string", "pattern": "^/[a-z]{2}(-[a-z0-9]+)?/[a-z_]+/[0-9]{4}/[a-z0-9-]+$" },
+    "jurisdiction": { "type": "string" },
+    "doc_type": { "enum": ["constitution", "law", "regulation", "judicial_interpretation", "directive", "eu_regulation", "statute", "code"] },
+    "official_title": { "type": "string", "minLength": 1 },
+    "lang": { "type": "string" },
+    "legal_areas": { "type": "array", "items": { "type": "string" } },
+    "version": {
+      "type": "object",
+      "required": ["label", "effective_from", "status"],
+      "properties": {
+        "label": { "type": "string" },
+        "promulgated_on": { "type": "string", "format": "date" },
+        "effective_from": { "type": "string", "format": "date" },
+        "effective_to": { "type": ["string", "null"], "format": "date" },
+        "status": { "enum": ["in_force", "amended", "repealed", "not_yet_effective"] }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["url", "retrieved_at", "license"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "retrieved_at": { "type": "string", "format": "date" },
+        "license": { "type": "string", "minLength": 1 }
+      }
+    },
+    "provisions": { "type": "array", "items": { "$ref": "#/$defs/provision" } }
+  },
+  "$defs": {
+    "provision": {
+      "type": "object",
+      "required": ["level", "number_label", "number_sort", "path"],
+      "properties": {
+        "level": { "enum": ["part", "chapter", "section", "article", "paragraph", "item", "sub_item"] },
+        "number_label": { "type": "string" },
+        "number_sort": { "type": "integer" },
+        "heading": { "type": "string" },
+        "text": { "type": "string" },
+        "path": { "type": "string" },
+        "translations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["lang", "text", "tier"],
+            "properties": {
+              "lang": { "type": "string" },
+              "text": { "type": "string" },
+              "tier": { "enum": ["official", "reviewed", "machine"] },
+              "source_url": { "type": "string" },
+              "engine": { "type": "string" }
+            }
+          }
+        },
+        "children": { "type": "array", "items": { "$ref": "#/$defs/provision" } }
+      }
+    }
+  }
+}

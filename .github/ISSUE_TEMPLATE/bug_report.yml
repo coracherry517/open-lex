@@ -1,0 +1,15 @@
+name: 🐛 Bug 报告
+description: 程序出现错误或异常行为
+labels: ["bug", "triage"]
+body:
+  - type: textarea
+    id: what
+    attributes: { label: 问题描述, description: 发生了什么？期望是什么？ }
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes: { label: 复现步骤, placeholder: "1. 打开…\n2. 点击…\n3. 出现…" }
+    validations: { required: true }
+  - type: input
+    id: env
+    attributes: { label: 环境, placeholder: 浏览器 / 系统 / 版本号 }

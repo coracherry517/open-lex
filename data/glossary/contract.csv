@@ -1,0 +1,8 @@
+concept_key,jurisdiction,lang,term,caution
+breach_of_contract,,zh-Hans,违约,
+breach_of_contract,,en,breach of contract,
+breach_of_contract,,ja,契約違反,日本民法常用「債務不履行」，二者不完全等同
+specific_performance,,zh-Hans,继续履行,
+specific_performance,,en,specific performance,普通法中为衡平法救济，适用条件比大陆法严格
+consideration,,en,consideration,普通法合同成立要件；中国法无对应概念，勿直译为"对价"后当作等同
+consideration,,zh-Hans,对价（普通法概念）,仅用于介绍普通法，不可用于翻译中国法条文
