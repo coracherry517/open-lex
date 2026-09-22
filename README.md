@@ -3,6 +3,8 @@
 > 一个开源、多语言、多法域的法律知识平台：法条检索 · 案例关联 · 多语翻译 · 法律知识社区 · 求助检索
 > An open-source, multilingual, multi-jurisdiction legal knowledge platform.
 
+🌐 **公开产品 / Live product**：[https://openlex.coracherry517.chatgpt.site](https://openlex.coracherry517.chatgpt.site)
+
 ⚠️ **免责声明 / Disclaimer**：本平台内容仅为法律信息，不构成法律意见。具体问题请咨询您所在法域的执业律师。详见 [DISCLAIMER.md](DISCLAIMER.md)。
 
 ---
