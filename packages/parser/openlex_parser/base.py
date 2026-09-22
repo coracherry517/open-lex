@@ -4,7 +4,7 @@ from __future__ import annotations
 import time
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
-from datetime import date
+from datetime import UTC, datetime
 
 USER_AGENT = "OpenLexBot/0.1 (+https://github.com/coracherry517/open-lex)"
 
@@ -17,7 +17,7 @@ class Provision:
     path: str
     text: str | None = None
     heading: str | None = None
-    children: list["Provision"] = field(default_factory=list)
+    children: list[Provision] = field(default_factory=list)
 
     def to_dict(self) -> dict:
         d = {k: v for k, v in self.__dict__.items() if v is not None and k != "children"}
@@ -55,7 +55,7 @@ class BaseParser(ABC):
             "jurisdiction": self.jurisdiction,
             "source": {
                 "url": source_url,
-                "retrieved_at": date.today().isoformat(),
+                "retrieved_at": datetime.now(UTC).date().isoformat(),
                 "license": self.source_license,
             },
             "provisions": [p.to_dict() for p in self.parse(raw)],
